@@ -78,7 +78,17 @@
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
         loadCart();
+        updateCartCount();
+
     }
+
+    function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            $('.cart-count').text(cart.length);
+        }
+
+        // Run it once when page loads
+        updateCartCount();
 
     document.addEventListener('DOMContentLoaded', loadCart);
 

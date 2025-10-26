@@ -5,6 +5,8 @@
 @section('content')
     <!-- Shop Banner -->
     <section class="shop-banner">
+        <div class="mt-5"></div>
+
         <div class="container text-center py-5">
             <h1 class="fw-bold">Shop All Toys</h1>
             <p class="text-muted">Browse our wide collection of premium ride-ons, slides, and educational toys.</p>
@@ -60,7 +62,10 @@
                             <div class="product-details text-center">
                                 <h3 class="product-title">{{ $ride['name'] }}</h3>
                                 <div class="product-price">₨ {{ $ride['price'] }}</div>
-                                <button class="btn btn-custom mt-2 add-to-cart" data-product-id="ride-{{ $loop->index }}">Add to Cart</button>
+                                <a href="{{ url('/productone0') }}" class="btn btn-outline-primary mt-2">
+                                    View Product
+                                     </a>
+
                             </div>
                         </div>
                     </div>
@@ -116,7 +121,9 @@
                         <div class="product-details text-center">
                             <h3 class="product-title">{{ $slide['name'] }}</h3>
                             <div class="product-price">₨ {{ $slide['price'] }}</div>
-                            <button class="btn btn-custom mt-2 add-to-cart" data-product-id="slide-{{ $loop->index }}">Add to Cart</button>
+                             <a href="{{ url('/productone0') }}" class="btn btn-outline-primary mt-2">
+                                    View Product
+                                     </a>
                         </div>
                     </div>
                 </div>
@@ -136,28 +143,30 @@
                 @php
                     $playItems = [
                         [
-                            'image' => 'https://toyishland.com/wp-content/uploads/2025/02/swing-car.jpg',
+                            'image' => 'https://m.media-amazon.com/images/I/61nyttr-WdL._AC_UF1000,1000_QL80_.jpg',
                             'name' => 'Swing Car',
                             'price' => '3,400'
                         ],
                         [
-                            'image' => 'https://toyishland.com/wp-content/uploads/2024/09/storage-cabinet.jpg',
+                            'image' => 'https://www.allinonestore.pk/cdn/shop/files/3-tiered-foldable-storage-cabinet-freestanding-toy-organizing-cart-665302.webp?v=1755459864&width=720',
                             'name' => 'Toy Storage Cabinet',
                             'price' => '6,500'
                         ],
                         [
-                            'image' => 'https://toyishland.com/wp-content/uploads/2024/12/push-car.jpg',
+                            'image' => 'https://img.drz.lazcdn.com/static/pk/p/1506bf32eb5baf16dbebdfab8f5d9248.jpg_720x720q80.jpg',
                             'name' => 'Push Car',
                             'price' => '2,999'
                         ],
                         [
-                            'image' => 'https://toyishland.com/wp-content/uploads/2024/12/kids-bike.jpg',
+                            'image' => 'https://isakaabengaluru.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/29125346/Hf49b0a6a3bf3415f9c9ba206cb6b6b0ak.jpg',
                             'name' => 'Kids Bike',
                             'price' => '5,800'
                         ]
                     ];
                 @endphp
 
+
+                
                 @foreach($playItems as $item)
                     <div class="col-lg-3 col-md-6">
                         <div class="product-item">
@@ -172,7 +181,9 @@
                             <div class="product-details text-center">
                                 <h3 class="product-title">{{ $item['name'] }}</h3>
                                 <div class="product-price">₨ {{ $item['price'] }}</div>
-                                <button class="btn btn-custom mt-2 add-to-cart" data-product-id="play-{{ $loop->index }}">Add to Cart</button>
+                                 <a href="{{ url('/productone0') }}" class="btn btn-outline-primary mt-2">
+                                    View Product
+                                     </a>
                             </div>
                         </div>
                     </div>
@@ -192,22 +203,22 @@
             @php
                 $education = [
                     [
-                        'image' => 'https://toyishland.com/wp-content/uploads/2024/12/abc-blocks.jpg',
+                        'image' => 'https://thestationers.pk/cdn/shop/files/wooden-double-abc-blocks-the-stationers.jpg?v=1708446799',
                         'name' => 'ABC Learning Blocks',
                         'price' => '2,200'
                     ],
                     [
-                        'image' => 'https://toyishland.com/wp-content/uploads/2024/12/color-shape-sorter.jpg',
+                        'image' => 'https://www.montessoritrove.com/cdn/shop/articles/51oPSnunS-L._AC_SL1001.jpg?v=1720829421',
                         'name' => 'Color Shape Sorter',
                         'price' => '1,950'
                     ],
                     [
-                        'image' => 'https://toyishland.com/wp-content/uploads/2024/12/maths-puzzle.jpg',
+                        'image' => 'https://5.imimg.com/data5/ANDROID/Default/2022/12/SP/VN/TN/138441414/product-jpeg-500x500.jpg',
                         'name' => 'Maths Puzzle Board',
                         'price' => '2,600'
                     ],
                     [
-                        'image' => 'https://toyishland.com/wp-content/uploads/2024/12/creative-drawing-board.jpg',
+                        'image' => 'https://thetoyfactory.pk/cdn/shop/files/3_1445x.webp?v=1756668939',
                         'name' => 'Creative Drawing Board',
                         'price' => '3,100'
                     ]
@@ -228,7 +239,9 @@
                         <div class="product-details text-center">
                             <h3 class="product-title">{{ $toy['name'] }}</h3>
                             <div class="product-price">₨ {{ $toy['price'] }}</div>
-                            <button class="btn btn-custom mt-2 add-to-cart" data-product-id="edu-{{ $loop->index }}">Add to Cart</button>
+                             <a href="{{ url('/productone0') }}" class="btn btn-outline-primary mt-2">
+                                    View Product
+                                     </a>
                         </div>
                     </div>
                 </div>
@@ -238,8 +251,16 @@
 @endsection
 
 @push('scripts')
-<script>
+<script>    
     $(document).ready(function() {
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            $('.cart-count').text(cart.length);
+        }
+
+        // Run it once when page loads
+        updateCartCount();
+
         $('.add-to-cart').on('click', function(e) {
             e.preventDefault();
 
@@ -253,6 +274,8 @@
 
             cart.push(product);
             localStorage.setItem('cart', JSON.stringify(cart));
+
+            updateCartCount();
 
             alert(`${name} added to cart!`);
         });

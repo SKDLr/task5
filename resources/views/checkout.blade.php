@@ -114,8 +114,8 @@
 <script>
     document.getElementById('placeOrderBtn').addEventListener('click', function(e) {
         e.preventDefault();
-        alert('✅ Thank you! Your order has been placed successfully.');
-        // In a real project, you would send the form data via AJAX or redirect to an order confirmation route.
+        window.location = "/success";
+        // alert('✅ Thank you! Your order has been placed successfully.');
     });
 </script>
 @endpush

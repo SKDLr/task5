@@ -155,8 +155,7 @@
                         <p>Since the past 25 years, Toyishland has understood the need of toys for children to encourage imaginative play and ensure safety for the little ones. Decades later, we serve to manufacture toys which are creatively designed, possessing the latest technology and cater mental and physical growth in children.</p>
                         <p>We deliver a vast range of toys for children aged between 1 to 8 years. Since 1995, we have pioneered in manufacturing battery operated ride-on cars, swing cars, push cars, slides, storage cabinets and much more.</p>
                         <div class="about-buttons mt-4">
-                            <a href="{{ url('/about-us') }}" class="btn btn-custom me-3">Read More</a>
-                            <a href="{{ url('/become-a-seller') }}" class="btn btn-custom">Become a Seller</a>
+                            <a href="{{ url('/about') }}" class="btn btn-custom me-3">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -234,6 +233,14 @@
 @push('scripts')
 <script>
     $(document).ready(function() {
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            $('.cart-count').text(cart.length);
+        }
+
+        // Run it once when page loads
+        updateCartCount();
+
         // Add to cart functionality
         $('.add-to-cart').on('click', function(e) {
             e.preventDefault();
@@ -242,6 +249,7 @@
             // Here you would typically make an AJAX call to add to cart
             console.log('Adding product to cart:', productId);
             
+        updateCartCount();
             // Show success message
             alert('Product added to cart successfully!');
         });

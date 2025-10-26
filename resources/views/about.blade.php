@@ -23,6 +23,7 @@
                 <div class="divider mb-3"></div>
                 <p>For over 25 years, Toyishland has been Pakistan’s trusted name in the world of children’s toys. We take pride in designing, manufacturing, and delivering fun, safe, and educational toys that spark imagination and creativity.</p>
                 <p>Our mission is simple: to bring joy to children while ensuring every product is safe, durable, and built with love. From ride-on cars to slides and learning toys — every Toyishland creation carries a promise of quality and happiness.</p>
+                
             </div>
         </div>
     </div>
@@ -48,8 +49,8 @@
                 $categories = [
                     ['img' => 'https://toyishland.com/wp-content/uploads/2024/11/BMW-Red-2.png', 'name' => 'Battery Operated Cars'],
                     ['img' => 'https://toyishland.com/wp-content/uploads/2025/06/bumpy-slide-1.webp', 'name' => 'Slides'],
-                    ['img' => 'https://toyishland.com/wp-content/uploads/2020/08/swing-2.webp', 'name' => 'Swings & Play Sets'],
-                    ['img' => 'https://toyishland.com/wp-content/uploads/2023/07/storage-1.webp', 'name' => 'Storage Cabinets']
+                    ['img' => 'https://media.diy.com/is/image/KingfisherDigital/costway-7-in-1-swing-set-outdoor-metal-playset-kids-backyard-playground-w-slide~7984702722480_01c_MP?$MOB_PREV$&$width=1200&$height=1200', 'name' => 'Swings & Play Sets'],
+                    ['img' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOX7hUzKKJ2F9ogcGkV_eeQggl5_koWH-eIA&s', 'name' => 'Storage Cabinets']
                 ];
             @endphp
 

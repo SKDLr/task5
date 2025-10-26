@@ -23,6 +23,13 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
+Route::get('/success', function () {
+    return view('success');
+});
+
+Route::get('/productone0', function () {
+    return view('product-detail');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

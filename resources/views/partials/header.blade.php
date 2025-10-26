@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="https://toyishland.com/wp-content/themes/zixton-test/assets/images/logo.svg" alt="Toyishland Logo" height="50">
+                <img src="https://toyishland.com/wp-content/themes/zixton-test/assets/images/logo.svg" alt="Toyishland " height="50">
             </a>
 
             <!-- Mobile Toggler -->

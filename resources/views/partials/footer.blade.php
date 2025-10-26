@@ -6,11 +6,6 @@
                 <div class="footer-column">
                     <h3>About Toyishland</h3>
                     <p>Toyishland is Pakistan's first toys making premium quality brand for Kids. With its own online toys shop, it's aiming to make kids toys shopping more reliable.</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-pinterest"></i></a>
-                    </div>
                 </div>
             </div>
 
@@ -21,9 +16,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/shop') }}">Shop</a></li>
-                        <li><a href="{{ url('/about-us') }}">About Us</a></li>
-                        <li><a href="{{ url('/contact') }}">Contact</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
                 </div>
             </div>
