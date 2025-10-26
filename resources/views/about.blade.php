@@ -7,7 +7,7 @@
 <section class="about-hero text-center text-light py-5" style="background: url('https://toyishland.com/wp-content/uploads/2023/05/Banner-1.webp') center/cover no-repeat;">
     <div class="container py-5">
         <h1 class="fw-bold display-5">About Toyishland</h1>
-        <p class="lead mt-3">Bringing smiles and imagination to life since 1995 🎠</p>
+        <p class="lead mt-3">Bringing smile, imagination & Love to life since 1995 🎠</p>
     </div>
 </section>
 

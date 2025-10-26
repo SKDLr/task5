@@ -23,7 +23,7 @@
                 <h4 class="text-success mb-3">₨ 29,500</h4>
 
                 <p class="text-muted">
-                    Experience the thrill of adventure with the <strong>Legender Ride</strong> —
+                    Experience the thrill of adventure and fun with the <strong>Legender Ride</strong> —
                     a premium electric jeep designed for kids who love excitement and style.
                     Durable, safe, and packed with fun features, it’s perfect for every little driver!
                 </p>
